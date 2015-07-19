@@ -4,15 +4,15 @@
  * @author Revin Roman
  */
 
-namespace cookyii\modules\Client\backend\controllers;
+namespace cookyii\modules\Client\crm\controllers;
 
 use cookyii\modules\Client;
 
 /**
  * Class ListController
- * @package cookyii\modules\Client\backend\controllers
+ * @package cookyii\modules\Client\crm\controllers
  */
-class ListController extends Client\backend\components\Controller
+class ListController extends Client\crm\components\Controller
 {
 
     /**
@@ -24,7 +24,7 @@ class ListController extends Client\backend\components\Controller
             [
                 'allow' => true,
                 'actions' => ['index'],
-                'roles' => [Client\backend\Permissions::ACCESS],
+                'roles' => [Client\crm\Permissions::ACCESS],
             ],
         ];
     }

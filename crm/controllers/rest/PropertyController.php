@@ -4,11 +4,11 @@
  * @author Revin Roman
  */
 
-namespace cookyii\modules\Client\backend\controllers\rest;
+namespace cookyii\modules\Client\crm\controllers\rest;
 
 /**
  * Class PropertyController
- * @package cookyii\modules\Client\backend\controllers\rest
+ * @package cookyii\modules\Client\crm\controllers\rest
  */
 class PropertyController extends \yii\rest\Controller
 {

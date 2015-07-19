@@ -4,13 +4,13 @@
  * @author Revin Roman
  */
 
-namespace cookyii\modules\Client\backend\controllers\rest;
+namespace cookyii\modules\Client\crm\controllers\rest;
 
 use cookyii\modules\Client;
 
 /**
  * Class ClientController
- * @package cookyii\modules\Client\backend\controllers\rest
+ * @package cookyii\modules\Client\crm\controllers\rest
  */
 class ClientController extends \yii\rest\ActiveController
 {
@@ -45,13 +45,13 @@ class ClientController extends \yii\rest\ActiveController
         $actions['index']['prepareDataProvider'] = [$this, 'prepareListDataProvider'];
 
         $actions['edit'] = [
-            'class' => Client\backend\controllers\rest\ClientController\EditFormAction::className(),
+            'class' => Client\crm\controllers\rest\ClientController\EditFormAction::className(),
             'modelClass' => $this->modelClass,
             'checkAccess' => [$this, 'checkAccess'],
         ];
 
         $actions['detail'] = [
-            'class' => Client\backend\controllers\rest\ClientController\DetailAction::className(),
+            'class' => Client\crm\controllers\rest\ClientController\DetailAction::className(),
             'modelClass' => $this->modelClass,
             'checkAccess' => [$this, 'checkAccess'],
         ];

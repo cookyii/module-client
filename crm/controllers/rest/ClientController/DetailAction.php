@@ -4,11 +4,11 @@
  * @author Revin Roman
  */
 
-namespace cookyii\modules\Client\backend\controllers\rest\ClientController;
+namespace cookyii\modules\Client\crm\controllers\rest\ClientController;
 
 /**
  * Class DetailAction
- * @package cookyii\modules\Client\backend\controllers\rest\ClientController
+ * @package cookyii\modules\Client\crm\controllers\rest\ClientController
  */
 class DetailAction extends \yii\rest\Action
 {

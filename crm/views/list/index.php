@@ -13,7 +13,7 @@ use yii\helpers\Json;
 
 $this->title = Yii::t('client', 'Clients management');
 
-Client\backend\assets\ListAssetBundle::register($this);
+Client\crm\assets\ListAssetBundle::register($this);
 
 /**
  * @param string $type

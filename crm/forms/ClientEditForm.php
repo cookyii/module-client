@@ -4,11 +4,11 @@
  * @author Revin Roman
  */
 
-namespace cookyii\modules\Client\backend\forms;
+namespace cookyii\modules\Client\crm\forms;
 
 /**
  * Class ClientEditForm
- * @package cookyii\modules\Client\backend\forms
+ * @package cookyii\modules\Client\crm\forms
  */
 class ClientEditForm extends \yii\base\Model
 {

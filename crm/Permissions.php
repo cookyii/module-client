@@ -4,16 +4,16 @@
  * @author Revin Roman http://phptime.ru
  */
 
-namespace cookyii\modules\Client\backend;
+namespace cookyii\modules\Client\crm;
 
 /**
  * Class Permissions
- * @package cookyii\modules\Client\backend
+ * @package cookyii\modules\Client\crm
  */
 class Permissions
 {
 
-    const ACCESS = 'backend.client.access';
+    const ACCESS = 'crm.client.access';
 
     /**
      * @return array
@@ -21,7 +21,7 @@ class Permissions
     public static function get()
     {
         return [
-            static::ACCESS => 'It has access to client backend module',
+            static::ACCESS => 'It has access to client crm module',
         ];
     }
 }

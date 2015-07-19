@@ -4,13 +4,13 @@
  * @author Revin Roman
  */
 
-namespace cookyii\modules\Client\backend\controllers\rest\ClientController;
+namespace cookyii\modules\Client\crm\controllers\rest\ClientController;
 
 use cookyii\modules\Client;
 
 /**
  * Class EditFormAction
- * @package cookyii\modules\Client\backend\controllers\rest\ClientController
+ * @package cookyii\modules\Client\crm\controllers\rest\ClientController
  */
 class EditFormAction extends \yii\rest\Action
 {
@@ -40,7 +40,7 @@ class EditFormAction extends \yii\rest\Action
             $Client = new \resources\Client();
         }
 
-        $ClientEditForm = new Client\backend\forms\ClientEditForm(['Client' => $Client]);
+        $ClientEditForm = new Client\crm\forms\ClientEditForm(['Client' => $Client]);
 
         $ClientEditForm->load(Request()->post())
         && $ClientEditForm->validate()

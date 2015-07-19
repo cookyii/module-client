@@ -4,7 +4,7 @@
  * @author Revin Roman
  *
  * @var yii\web\View $this
- * @var Client\backend\forms\ClientEditForm $ClientEditForm
+ * @var Client\crm\forms\ClientEditForm $ClientEditForm
  */
 
 use cookyii\modules\Client;
@@ -13,7 +13,7 @@ use yii\helpers\Html;
 
 $this->title = Yii::t('client', 'Edit client');
 
-Client\backend\assets\EditAssetBundle::register($this);
+Client\crm\assets\EditAssetBundle::register($this);
 
 ?>
 

@@ -4,15 +4,15 @@
  * @author Revin Roman
  */
 
-namespace cookyii\modules\Client\backend\controllers;
+namespace cookyii\modules\Client\crm\controllers;
 
 use cookyii\modules\Client;
 
 /**
  * Class EditController
- * @package cookyii\modules\Client\backend\controllers
+ * @package cookyii\modules\Client\crm\controllers
  */
-class EditController extends Client\backend\components\Controller
+class EditController extends Client\crm\components\Controller
 {
 
     /**
@@ -24,7 +24,7 @@ class EditController extends Client\backend\components\Controller
             [
                 'allow' => true,
                 'actions' => ['index'],
-                'roles' => [Client\backend\Permissions::ACCESS],
+                'roles' => [Client\crm\Permissions::ACCESS],
             ],
         ];
     }
@@ -34,7 +34,7 @@ class EditController extends Client\backend\components\Controller
      */
     public function actionIndex()
     {
-        $ClientEditForm = new Client\backend\forms\ClientEditForm([
+        $ClientEditForm = new Client\crm\forms\ClientEditForm([
             'Client' => new \resources\Client(),
         ]);
 

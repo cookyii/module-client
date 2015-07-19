@@ -4,7 +4,7 @@
  * @author Revin Roman
  *
  * @var yii\web\View $this
- * @var Client\backend\forms\ClientEditForm $ClientEditForm
+ * @var Client\crm\forms\ClientEditForm $ClientEditForm
  */
 
 use cookyii\modules\Client;

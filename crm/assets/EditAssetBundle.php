@@ -4,11 +4,11 @@
  * @author Revin Roman
  */
 
-namespace cookyii\modules\Client\backend\assets;
+namespace cookyii\modules\Client\crm\assets;
 
 /**
  * Class EditAssetBundle
- * @package cookyii\modules\Client\backend\assets
+ * @package cookyii\modules\Client\crm\assets
  */
 class EditAssetBundle extends \yii\web\AssetBundle
 {
@@ -28,7 +28,7 @@ class EditAssetBundle extends \yii\web\AssetBundle
     ];
 
     public $depends = [
-        'backend\assets\AppAsset',
+        'crm\assets\AppAsset',
     ];
 
     public function init()
