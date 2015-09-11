@@ -13,8 +13,8 @@
   "authors": [
     {
       "name": "Revin Roman",
-      "email": "roman@rmrevin.ru",
-      "homepage": "https://rmrevin.ru/",
+      "email": "roman@rmrevin.com",
+      "homepage": "https://rmrevin.com/",
       "role": "Founder and project lead"
     },
     {
@@ -39,8 +39,7 @@
   },
   "autoload": {
     "psr-4": {
-      "cookyii\\modules\\Client\\": "",
-      "resources\\": "./resources"
+      "cookyii\\modules\\Client\\": ""
     }
   }
 }

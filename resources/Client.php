@@ -2,10 +2,10 @@
 /**
  * Client.php
  * @author Revin Roman
- * @link https://rmrevin.ru
+ * @link https://rmrevin.com
  */
 
-namespace resources;
+namespace cookyii\modules\Client\resources;
 
 /**
  * Class Client
@@ -19,12 +19,12 @@ namespace resources;
  * @property integer $updated_at
  * @property integer $deleted_at
  *
- * @property \resources\Client\Property[] $properties
+ * @property \cookyii\modules\Client\resources\Client\Property[] $properties
  *
- * @property \resources\helpers\ClientPresent $present
+ * @property \cookyii\modules\Client\resources\helpers\ClientPresent $present
  *
- * @method \resources\queries\ClientQuery hasMany($class, $link)
- * @method \resources\queries\ClientQuery hasOne($class, $link)
+ * @method \cookyii\modules\Client\resources\queries\ClientQuery hasMany($class, $link)
+ * @method \cookyii\modules\Client\resources\queries\ClientQuery hasOne($class, $link)
  */
 class Client extends \yii\db\ActiveRecord
 {
@@ -77,14 +77,14 @@ class Client extends \yii\db\ActiveRecord
     private $present = null;
 
     /**
-     * @return \resources\helpers\ClientPresent
+     * @return \cookyii\modules\Client\resources\helpers\ClientPresent
      * @throws \yii\base\InvalidConfigException
      */
     public function getPresent()
     {
         if ($this->present === null) {
             $this->present = \Yii::createObject([
-                'class' => \resources\helpers\ClientPresent::className(),
+                'class' => \cookyii\modules\Client\resources\helpers\ClientPresent::className(),
                 'Model' => $this,
             ]);
         }
@@ -139,19 +139,19 @@ class Client extends \yii\db\ActiveRecord
     }
 
     /**
-     * @return \resources\queries\AccountQuery
+     * @return \cookyii\modules\Account\resources\queries\AccountQuery
      */
     public function getProperties()
     {
-        return $this->hasMany(\resources\Client\Property::className(), ['client_id' => 'id']);
+        return $this->hasMany(\cookyii\modules\Client\resources\Client\Property::className(), ['client_id' => 'id']);
     }
 
     /**
-     * @return \resources\queries\ClientQuery
+     * @return \cookyii\modules\Client\resources\queries\ClientQuery
      */
     public static function find()
     {
-        return new \resources\queries\ClientQuery(get_called_class());
+        return new \cookyii\modules\Client\resources\queries\ClientQuery(get_called_class());
     }
 
     /**
