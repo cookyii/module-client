@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f3f50f049743d18061c8517034fbe891",
+    "hash": "6eafa6a5755aca5b7b9a7f3922696fa9",
     "packages": [
         {
             "name": "bower-asset/fontawesome",
@@ -266,12 +266,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cookyii/base.git",
-                "reference": "0de1bfbff96e04ececcda516c19a261f3c8769f2"
+                "reference": "05857dc101ccb44c37d5c8cbfe8000d2941a639a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cookyii/base/zipball/0de1bfbff96e04ececcda516c19a261f3c8769f2",
-                "reference": "0de1bfbff96e04ececcda516c19a261f3c8769f2",
+                "url": "https://api.github.com/repos/cookyii/base/zipball/05857dc101ccb44c37d5c8cbfe8000d2941a639a",
+                "reference": "05857dc101ccb44c37d5c8cbfe8000d2941a639a",
                 "shasum": ""
             },
             "require": {
@@ -305,7 +305,58 @@
                 "cookyii",
                 "yii2"
             ],
-            "time": "2015-09-11 20:16:02"
+            "time": "2015-09-12 10:46:54"
+        },
+        {
+            "name": "cookyii/module-account",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cookyii/module-account.git",
+                "reference": "3ef9468d8e83284f55e564f63ab4be710b4d2e32"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cookyii/module-account/zipball/3ef9468d8e83284f55e564f63ab4be710b4d2e32",
+                "reference": "3ef9468d8e83284f55e564f63ab4be710b4d2e32",
+                "shasum": ""
+            },
+            "require": {
+                "cookyii/base": "dev-master",
+                "cookyii/module-postman": "dev-master",
+                "php": ">=5.4.0",
+                "rmrevin/yii2-fontawesome": "~2.10",
+                "rmrevin/yii2-rbac-command": "~1.3",
+                "yiisoft/yii2-authclient": "2.0.*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "cookyii\\modules\\Account\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Revin Roman",
+                    "email": "roman@rmrevin.com",
+                    "homepage": "https://rmrevin.com/",
+                    "role": "Founder and project lead"
+                }
+            ],
+            "description": "Account management module for Cookyii CMF",
+            "keywords": [
+                "account",
+                "cmf",
+                "cookyii",
+                "module",
+                "user",
+                "yii2"
+            ],
+            "time": "2015-09-12 11:13:46"
         },
         {
             "name": "cookyii/module-media",
@@ -313,12 +364,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cookyii/module-media.git",
-                "reference": "5a781275dcc8eab62de1e74bc4d461d9fc1eeb57"
+                "reference": "97389337bd5c883388d72e5ea630873252bb5083"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cookyii/module-media/zipball/5a781275dcc8eab62de1e74bc4d461d9fc1eeb57",
-                "reference": "5a781275dcc8eab62de1e74bc4d461d9fc1eeb57",
+                "url": "https://api.github.com/repos/cookyii/module-media/zipball/97389337bd5c883388d72e5ea630873252bb5083",
+                "reference": "97389337bd5c883388d72e5ea630873252bb5083",
                 "shasum": ""
             },
             "require": {
@@ -358,7 +409,57 @@
                 "video",
                 "yii2"
             ],
-            "time": "2015-09-11 20:12:16"
+            "time": "2015-09-11 21:20:08"
+        },
+        {
+            "name": "cookyii/module-postman",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cookyii/module-postman.git",
+                "reference": "6b513d7e52a5838b64b62b9d062d0746f84e5ac6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cookyii/module-postman/zipball/6b513d7e52a5838b64b62b9d062d0746f84e5ac6",
+                "reference": "6b513d7e52a5838b64b62b9d062d0746f84e5ac6",
+                "shasum": ""
+            },
+            "require": {
+                "cookyii/base": "dev-master",
+                "cookyii/module-media": "dev-master",
+                "php": ">=5.4.0",
+                "rmrevin/yii2-fontawesome": "~2.10"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "cookyii\\modules\\Postman\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Revin Roman",
+                    "email": "roman@rmrevin.com",
+                    "homepage": "https://rmrevin.com/",
+                    "role": "Founder and project lead"
+                }
+            ],
+            "description": "Emails management module for Cookyii CMF",
+            "keywords": [
+                "cmf",
+                "cookyii",
+                "email",
+                "letters",
+                "module",
+                "queue",
+                "yii2"
+            ],
+            "time": "2015-09-11 21:20:41"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -509,6 +610,49 @@
             "time": "2015-08-15 16:50:16"
         },
         {
+            "name": "rmrevin/yii2-rbac-command",
+            "version": "1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rmrevin/yii2-rbac-command.git",
+                "reference": "b69fd9a559369b42af98d4d7344f8e07885f9891"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rmrevin/yii2-rbac-command/zipball/b69fd9a559369b42af98d4d7344f8e07885f9891",
+                "reference": "b69fd9a559369b42af98d4d7344f8e07885f9891",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "yiisoft/yii2": "2.0.*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "rmrevin\\yii\\rbac\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Revin",
+                    "email": "xgismox@gmail.com",
+                    "homepage": "http://rmrevin.ru/"
+                }
+            ],
+            "description": "Extension for RBAC rules update for Yii2",
+            "keywords": [
+                "command",
+                "rbac",
+                "yii"
+            ],
+            "time": "2015-06-19 17:36:50"
+        },
+        {
             "name": "yiisoft/yii2",
             "version": "2.0.6",
             "source": {
@@ -595,6 +739,54 @@
                 "yii2"
             ],
             "time": "2015-08-05 22:00:30"
+        },
+        {
+            "name": "yiisoft/yii2-authclient",
+            "version": "2.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii2-authclient.git",
+                "reference": "cbe801a7d8bb477be15cb0fbdaa75ca5bdfeb91b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-authclient/zipball/cbe801a7d8bb477be15cb0fbdaa75ca5bdfeb91b",
+                "reference": "cbe801a7d8bb477be15cb0fbdaa75ca5bdfeb91b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "yiisoft/yii2": ">=2.0.4"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "yii\\authclient\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Paul Klimov",
+                    "email": "klimov.paul@gmail.com"
+                }
+            ],
+            "description": "External authentication via OAuth and OpenID for the Yii framework",
+            "keywords": [
+                "OpenId",
+                "auth",
+                "oauth",
+                "yii2"
+            ],
+            "time": "2015-05-10 22:07:56"
         },
         {
             "name": "yiisoft/yii2-composer",
@@ -696,7 +888,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "cookyii/base": 20
+        "cookyii/base": 20,
+        "cookyii/module-account": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
