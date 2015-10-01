@@ -1,15 +1,15 @@
 <?php
 /**
- * Property.php
+ * ClientProperty.php
  * @author Revin Roman
  * @link https://rmrevin.com
  */
 
-namespace cookyii\modules\Client\resources\Client;
+namespace cookyii\modules\Client\resources;
 
 /**
- * Class Property
- * @package cookyii\modules\Client\resources\Client
+ * Class ClientProperty
+ * @package cookyii\modules\Client\resources
  *
  * @property integer $client_id
  * @property string $key
@@ -17,7 +17,7 @@ namespace cookyii\modules\Client\resources\Client;
  * @property integer $created_at
  * @property integer $updated_at
  */
-class Property extends \yii\db\ActiveRecord
+class ClientProperty extends \yii\db\ActiveRecord
 {
 
     /**
@@ -93,12 +93,12 @@ class Property extends \yii\db\ActiveRecord
     }
 
     /**
-     * @return \cookyii\modules\Client\resources\Client\queries\ClientPropertyQuery
+     * @return \cookyii\modules\Client\resources\queries\ClientPropertyQuery
      */
     public static function find()
     {
         return \Yii::createObject(
-            \cookyii\modules\Client\resources\Client\queries\ClientPropertyQuery::className(), [
+            \cookyii\modules\Client\resources\queries\ClientPropertyQuery::className(), [
                 get_called_class(),
             ]
         );
