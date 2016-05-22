@@ -2,9 +2,9 @@
 
 angular.module('CrmApp')
 
-  .controller('ClientEditController', [
-    '$scope', '$http', '$timeout', 'QueryScope', 'ToastrScope', 'ClientAccountScope',
-    function ($scope, $http, $timeout, QueryScope, ToastrScope, ClientAccountScope) {
+  .controller('client.EditController', [
+    '$scope', '$http', '$timeout', 'QueryScope', 'ToastrScope', 'client.edit.AccountScope',
+    function ($scope, $http, $timeout, QueryScope, ToastrScope, AccountScope) {
 
       var query = QueryScope($scope),
         toastr = ToastrScope($scope);
@@ -12,7 +12,7 @@ angular.module('CrmApp')
       $scope.inProgress = false;
 
       $scope.error = {};
-      $scope.account = ClientAccountScope($scope);
+      $scope.account = AccountScope($scope);
 
       $scope.submit = function (ClientEditForm, e) {
         var $form = angular.element('#ClientEditForm');

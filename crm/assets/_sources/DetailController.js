@@ -2,8 +2,8 @@
 
 angular.module('CrmApp')
 
-  .controller('ClientDetailController', [
-    '$scope', '$timeout', 'QueryScope', 'ClientResource',
+  .controller('client.DetailController', [
+    '$scope', '$timeout', 'QueryScope', 'client.ClientResource',
     function ($scope, $timeout, QueryScope, Client) {
 
       var hash = null,

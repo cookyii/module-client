@@ -2,7 +2,7 @@
 
 angular.module('CrmApp')
 
-  .service('FilterScope', [
+  .service('client.list.FilterScope', [
     'QueryScope', 'FilterSearchScope',
     function (QueryScope, FilterSearchScope) {
       return function ($parentScope) {

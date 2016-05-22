@@ -2,8 +2,8 @@
 
 angular.module('CrmApp')
 
-  .factory('ClientListScope', [
-    '$timeout', 'QueryScope', 'ToastrScope', 'SortScope', 'FilterScope', 'ClientResource',
+  .factory('client.list.ListScope', [
+    '$timeout', 'QueryScope', 'ToastrScope', 'SortScope', 'client.list.FilterScope', 'client.ClientResource',
     function ($timeout, QueryScope, ToastrScope, SortScope, FilterScope, Client) {
       return function ($parentScope) {
 

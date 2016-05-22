@@ -2,7 +2,7 @@
 
 angular.module('CrmApp')
 
-  .factory('ClientAccountScope', [
+  .factory('client.edit.AccountScope', [
     '$timeout', '$http', 'ToastrScope',
     function ($timeout, $http, ToastrScope) {
       return function ($parentScope) {

@@ -2,11 +2,11 @@
 
 angular.module('CrmApp')
 
-  .controller('ClientListController', [
-    '$scope', '$timeout', 'ClientListScope',
-    function ($scope, $timeout, ClientListScope) {
+  .controller('client.ListController', [
+    '$scope', '$timeout', 'client.list.ListScope',
+    function ($scope, $timeout, ListScope) {
 
-      $scope.clients = ClientListScope($scope);
+      $scope.clients = ListScope($scope);
 
       function _refresh() {
         $scope.clients.reload(false);
