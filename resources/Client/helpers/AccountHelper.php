@@ -1,28 +1,29 @@
 <?php
 /**
- * ClientAccount.php
+ * AccountHelper.php
  * @author Revin Roman
  * @link https://rmrevin.com
  */
 
-namespace cookyii\modules\Client\resources\helpers;
+namespace cookyii\modules\Client\resources\Client\helpers;
 
 use cookyii\modules\Account;
+use cookyii\modules\Account\resources\Account\Model as AccountModel;
 
 /**
- * Class ClientAccount
- * @package cookyii\modules\Client\resources\helpers
+ * Class AccountHelper
+ * @package cookyii\modules\Client\resources\Client\helpers
  *
- * @property \cookyii\modules\Client\resources\Client $Model
+ * @property \cookyii\modules\Client\resources\Client\Model $Model
  */
-class ClientAccount extends \cookyii\db\helpers\AbstractHelper
+class AccountHelper extends \cookyii\db\helpers\AbstractHelper
 {
 
     /**
      * @param null|string $name
      * @param null|string $email
      * @param null|string $password
-     * @return \cookyii\modules\Account\resources\Account
+     * @return AccountModel
      * @throws \yii\base\Exception
      */
     public function create($name = null, $email = null, $password = null)
@@ -37,8 +38,8 @@ class ClientAccount extends \cookyii\db\helpers\AbstractHelper
         $email = empty($email) ? $Client->email : $email;
         $password = empty($password) ? Security()->generateRandomString(10) : $password;
 
-        /** @var \cookyii\modules\Account\resources\Account $AccountModel */
-        $AccountModel = \Yii::createObject(\cookyii\modules\Account\resources\Account::className());
+        /** @var AccountModel $AccountModel */
+        $AccountModel = \Yii::createObject(AccountModel::className());
 
         $Account = $AccountModel::find()
             ->byEmail($email)

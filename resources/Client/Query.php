@@ -1,20 +1,20 @@
 <?php
 /**
- * ClientQuery.php
+ * Query.php
  * @author Revin Roman
  * @link https://rmrevin.com
  */
 
-namespace cookyii\modules\Client\resources\queries;
+namespace cookyii\modules\Client\resources\Client;
 
 /**
- * Class ClientQuery
- * @package cookyii\modules\Client\resources\queries
+ * Class Query
+ * @package cookyii\modules\Client\resources\Client
  *
- * @method \cookyii\modules\Client\resources\Client|array|null one($db = null)
- * @method \cookyii\modules\Client\resources\Client[]|array all($db = null)
+ * @method Model|array|null one($db = null)
+ * @method Model[]|array all($db = null)
  */
-class ClientQuery extends \yii\db\ActiveQuery
+class Query extends \yii\db\ActiveQuery
 {
 
     use \cookyii\db\traits\query\DeletedQueryTrait;

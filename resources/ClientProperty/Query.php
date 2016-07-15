@@ -1,20 +1,20 @@
 <?php
 /**
- * ClientPropertyQuery.php
+ * Query.php
  * @author Revin Roman
  * @link https://rmrevin.com
  */
 
-namespace cookyii\modules\Client\resources\queries;
+namespace cookyii\modules\Client\resources\ClientProperty;
 
 /**
- * Class ClientPropertyQuery
- * @package cookyii\modules\Client\resources\queries
+ * Class Query
+ * @package cookyii\modules\Client\resources\ClientProperty
  *
- * @method \cookyii\modules\Client\resources\ClientProperty|array|null one($db = null)
- * @method \cookyii\modules\Client\resources\ClientProperty[]|array all($db = null)
+ * @method Model|array|null one($db = null)
+ * @method Model[]|array all($db = null)
  */
-class ClientPropertyQuery extends \yii\db\ActiveQuery
+class Query extends \yii\db\ActiveQuery
 {
 
     /**

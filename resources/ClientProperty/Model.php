@@ -1,17 +1,17 @@
 <?php
 /**
- * ClientProperty.php
+ * Model.php
  * @author Revin Roman
  * @link https://rmrevin.com
  */
 
-namespace cookyii\modules\Client\resources;
+namespace cookyii\modules\Client\resources\ClientProperty;
 
 use cookyii\helpers\ApiAttribute;
 
 /**
- * Class ClientProperty
- * @package cookyii\modules\Client\resources
+ * Class Model
+ * @package cookyii\modules\Client\resources\ClientProperty
  *
  * @property integer $client_id
  * @property string $key
@@ -19,8 +19,10 @@ use cookyii\helpers\ApiAttribute;
  * @property integer $created_at
  * @property integer $updated_at
  */
-class ClientProperty extends \cookyii\db\ActiveRecord
+class Model extends \cookyii\db\ActiveRecord
 {
+
+    static $tableName = '{{%client_property}}';
 
     /**
      * @inheritdoc
@@ -123,22 +125,10 @@ class ClientProperty extends \cookyii\db\ActiveRecord
     }
 
     /**
-     * @return \cookyii\modules\Client\resources\queries\ClientPropertyQuery
+     * @return Query
      */
     public static function find()
     {
-        return \Yii::createObject(
-            \cookyii\modules\Client\resources\queries\ClientPropertyQuery::className(), [
-                get_called_class(),
-            ]
-        );
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public static function tableName()
-    {
-        return '{{%client_property}}';
+        return \Yii::createObject(Query::class, [get_called_class()]);
     }
 }

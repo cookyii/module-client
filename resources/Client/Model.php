@@ -1,17 +1,19 @@
 <?php
 /**
- * Client.php
+ * Model.php
  * @author Revin Roman
  * @link https://rmrevin.com
  */
 
-namespace cookyii\modules\Client\resources;
+namespace cookyii\modules\Client\resources\Client;
 
 use cookyii\helpers\ApiAttribute;
+use cookyii\modules\Account\resources\Account\Model as AccountModel;
+use cookyii\modules\Client\resources\ClientProperty\Model as ClientPropertyModel;
 
 /**
- * Class Client
- * @package resources
+ * Class Model
+ * @package cookyii\modules\Client\resources\Client
  *
  * @property integer $id
  * @property integer $account_id
@@ -22,26 +24,28 @@ use cookyii\helpers\ApiAttribute;
  * @property integer $updated_at
  * @property integer $deleted_at
  *
- * @property \cookyii\modules\Account\resources\Account $account
- * @property \cookyii\modules\Client\resources\ClientProperty[] $properties
+ * @property AccountModel $account
+ * @property ClientPropertyModel[] $properties
  *
- * @property \cookyii\modules\Client\resources\helpers\ClientPresent $presentHelper
- * @property \cookyii\modules\Client\resources\helpers\ClientAccount $accountHelper
+ * @property helpers\PresentHelper $presentHelper
+ * @property helpers\AccountHelper $accountHelper
  */
-class Client extends \cookyii\db\ActiveRecord
+class Model extends \cookyii\db\ActiveRecord
 {
 
     use \cookyii\db\traits\SoftDeleteTrait;
 
-    /**
-     * @var string
-     */
-    public $presentHelperClass = 'cookyii\\modules\\Client\\resources\\helpers\\ClientPresent';
+    static $tableName = '{{%client}}';
 
     /**
      * @var string
      */
-    public $accountHelperClass = 'cookyii\\modules\\Client\\resources\\helpers\\ClientAccount';
+    public $presentHelperClass = helpers\PresentHelper::class;
+
+    /**
+     * @var string
+     */
+    public $accountHelperClass = helpers\AccountHelper::class;
 
     /**
      * @inheritdoc
@@ -77,7 +81,7 @@ class Client extends \cookyii\db\ActiveRecord
     {
         $fields = parent::extraFields();
 
-        $fields['account'] = function (Client $Model) {
+        $fields['account'] = function (self $Model) {
             $result = null;
 
             $Account = $Model->account;
@@ -88,7 +92,7 @@ class Client extends \cookyii\db\ActiveRecord
             return $result;
         };
 
-        $fields['properties'] = function (Client $Model) {
+        $fields['properties'] = function (self $Model) {
             $result = [];
 
             $properties = $Model->properties();
@@ -129,7 +133,7 @@ class Client extends \cookyii\db\ActiveRecord
     }
 
     /**
-     * @return \cookyii\db\helpers\NotificationHelper
+     * @return helpers\AccountHelper
      * @throws \yii\base\InvalidConfigException
      */
     public function getAccountHelper()
@@ -184,44 +188,32 @@ class Client extends \cookyii\db\ActiveRecord
     }
 
     /**
-     * @return \cookyii\modules\Client\resources\queries\ClientQuery
+     * @return \cookyii\modules\Account\resources\Account\Query
      */
     public function getAccount()
     {
-        /** @var \cookyii\modules\Account\resources\Account $AccountModel */
-        $AccountModel = \Yii::createObject(\cookyii\modules\Account\resources\Account::className());
+        /** @var AccountModel $AccountModel */
+        $AccountModel = \Yii::createObject(AccountModel::className());
 
         return $this->hasOne($AccountModel::className(), ['id' => 'account_id']);
     }
 
     /**
-     * @return \cookyii\modules\Client\resources\queries\ClientQuery
+     * @return \cookyii\modules\Client\resources\ClientProperty\Query
      */
     public function getProperties()
     {
-        /** @var \cookyii\modules\Client\resources\ClientProperty $ClientPropertyModel */
-        $ClientPropertyModel = \Yii::createObject(\cookyii\modules\Client\resources\ClientProperty::className());
+        /** @var ClientPropertyModel $ClientPropertyModel */
+        $ClientPropertyModel = \Yii::createObject(ClientPropertyModel::className());
 
         return $this->hasMany($ClientPropertyModel::className(), ['client_id' => 'id']);
     }
 
     /**
-     * @return \cookyii\modules\Client\resources\queries\ClientQuery
+     * @return Query
      */
     public static function find()
     {
-        return \Yii::createObject(
-            \cookyii\modules\Client\resources\queries\ClientQuery::className(), [
-                get_called_class(),
-            ]
-        );
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public static function tableName()
-    {
-        return '{{%client}}';
+        return \Yii::createObject(Query::class, [get_called_class()]);
     }
 }
